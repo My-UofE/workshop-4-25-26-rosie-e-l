@@ -57,5 +57,19 @@ public class RectangleApp {
 		boolean result = Rectangle.areOverlapping(myRect4, myRect5);
 		System.out.println( "myRect4 overlaps myRect5: "+result);
 
+		System.out.println("Check class prevents negative widths");
+
+		// initialise rectangle for test
+		Rectangle myRect7 = new Rectangle(30.0, 5.0, 10, 10); 
+		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() );
+
+		// change to positive width should be allowed
+		myRect7.setWidth(40);
+		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() );
+
+		// change to negative width should be ignored
+		myRect7.setWidth(-10);
+		System.out.println( "Width: "+myRect7.getWidth()+", Height: "+myRect7.getHeight() );
+
 	}
 }
