@@ -11,11 +11,26 @@ public class Rectangle {
   public static final int NUMBER_OF_SIDES = 4;
 
   // main constructor
-  public Rectangle(double w, double h, double oX, double oY) {
-    width = w;
-    height = h;
-    originX = oX;
-    originY = oY;
+  public Rectangle(double width, double height, double originX, double originY) {
+    this.width = width;
+    this.height = height;
+    this.originX = originX;
+    this.originY = originY;
+  }
+
+  // second constructor: 
+  //allows us to instantiate a rectangle without providing all four arguements
+  public Rectangle(double width, double height) {
+    this(width, height, 0, 0);
+  }
+
+  //third constructor:
+  //without providing any arguments
+  public Rectangle(){
+    width = 1;
+    height = 1;
+    originX = 0;
+    originY = 0;
   }
 
   // method: move the rectangle
